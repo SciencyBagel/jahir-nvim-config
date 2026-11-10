@@ -5,7 +5,8 @@ return {
     merge_keywords = true,
     keywords = {
       -- Add a new keyword with its own icon and color
-      REFACTOR = { color = "info" }
+      REFACTOR = { color = "info" },
+      QUESTION = { color = "warning" }
     },
   },
 }
