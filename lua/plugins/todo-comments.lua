@@ -5,9 +5,8 @@ return {
     merge_keywords = true,
     keywords = {
       -- Add a new keyword with its own icon and color
-      WIP = { color = "info" },
-      REFACTOR = { color = "info" },
-      QUESTION = { color = "warning" },
+      TODO = { alt = { "WIP", "REFACTOR" } },
+      QUESTION = { icon = "? ", color = "warning" },
     },
   },
 }
