@@ -2,7 +2,7 @@ local custom_keywords = {
   -- Share these tags between todo-comments highlighting and the focused picker.
   WIP = { icon = " ", color = "#C77DFF" },
   REFAC = { icon = " ", color = "info" },
-  QUEST = { icon = " ", color = "warning" },
+  QUEST = { icon = " ", color = "warning", alt = { "WHATIS" } },
 }
 
 return {
