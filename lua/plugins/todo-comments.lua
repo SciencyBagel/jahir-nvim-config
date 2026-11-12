@@ -1,8 +1,15 @@
 local custom_keywords = {
   -- Share these tags between todo-comments highlighting and the focused picker.
-  WIP = { icon = " ", color = "#C77DFF" },
   REFAC = { icon = " ", color = "info" },
+  -- Marks questions about programmer's intent (asks "why?" not "what?")
   QUEST = { icon = " ", color = "warning", alt = { "WHATIS" } },
+
+  -- Marks code for self study (only meant for me)
+  STUDY = { icon = " ", color = "#73DACA" },
+
+  -- Marks where I left off before stepping away from computer (only meant for me)
+  WIP = { icon = " ", color = "#C77DFF" },
+
 }
 
 return {
