@@ -25,7 +25,7 @@ Local-only markers (remove before merge):
 -- Custom tags are also used by the focused todo picker.
 local custom_keywords = {
   REFAC = { icon = " ", color = "info" },
-  QUEST = { icon = " ", color = "warning", alt = { "WHATIS" } },
+  QUEST = { icon = " ", color = "warning", alt = { "WHATIS", "QUESTION" } },
   STUDY = { icon = " ", color = "#73DACA" },
   WIP = { icon = " ", color = "#C77DFF" },
 }
