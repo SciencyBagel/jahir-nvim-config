@@ -1,15 +1,33 @@
+--[[
+Todo markers are personal guidelines, not rules enforced by Git.
+Local commits may contain any tag; use a draft MR for unfinished work.
+Before merging, resolve or explicitly track unfinished work and review remaining tags.
+
+Work to fix or track:
+  FIX    Fix new defects before merge; keep only tracked, known defects afterward.
+  TODO   Specific, nonblocking follow-up; remove when done.
+  HACK   Explain the workaround and when to remove it; remove when replaced.
+  WARN   Serious hazard; keep only while the hazard exists.
+  PERF   Meet requirements first; track optional improvements until done.
+  TEST   Add essential tests before merge; keep only tracked, optional gaps.
+  REFAC  Nonblocking cleanup; resolve or track, then remove when refactored.
+
+Information and questions:
+  NOTE   Useful explanation; keep while accurate.
+  QUEST  Ask why code exists (not what it does). Answer before merge; turn any
+         lasting concern into TODO or NOTE, then remove QUEST. Alias: WHATIS.
+
+Local-only markers (remove before merge):
+  STUDY  Personal learning notes.
+  WIP    Where you left off before stepping away.
+]]
+
+-- Custom tags are also used by the focused todo picker.
 local custom_keywords = {
-  -- Share these tags between todo-comments highlighting and the focused picker.
   REFAC = { icon = " ", color = "info" },
-  -- Marks questions about programmer's intent (asks "why?" not "what?")
   QUEST = { icon = " ", color = "warning", alt = { "WHATIS" } },
-
-  -- Marks code for self study (only meant for me)
   STUDY = { icon = " ", color = "#73DACA" },
-
-  -- Marks where I left off before stepping away from computer (only meant for me)
   WIP = { icon = " ", color = "#C77DFF" },
-
 }
 
 return {
