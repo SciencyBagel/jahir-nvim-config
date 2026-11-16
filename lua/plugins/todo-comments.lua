@@ -30,6 +30,13 @@ local custom_keywords = {
   WIP = { icon = " ", color = "#C77DFF" },
 }
 
+---Return the standard and custom tags shared by both focused todo searches.
+local function focused_keywords()
+  local keywords = { "TODO", "FIX", "FIXME" }
+  vim.list_extend(keywords, vim.tbl_keys(custom_keywords))
+  return keywords
+end
+
 return {
   "folke/todo-comments.nvim",
   opts = {
@@ -41,12 +48,16 @@ return {
     {
       "<leader>sT",
       function()
-        -- Keep LazyVim's TODO/FIX/FIXME filter and include every custom tag.
-        local keywords = { "TODO", "FIX", "FIXME" }
-        vim.list_extend(keywords, vim.tbl_keys(custom_keywords))
-        Snacks.picker.todo_comments({ keywords = keywords })
+        Snacks.picker.todo_comments({ keywords = focused_keywords() })
       end,
       desc = "Todo/Fix/Custom",
+    },
+    {
+      "<leader>xT",
+      function()
+        require("trouble").toggle({ mode = "todo", filter = { tag = focused_keywords() } })
+      end,
+      desc = "Todo/Fix/Custom (Trouble)",
     },
   },
 }
