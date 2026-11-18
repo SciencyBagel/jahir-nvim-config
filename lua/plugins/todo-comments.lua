@@ -5,7 +5,10 @@ Before merging, resolve or explicitly track unfinished work and review remaining
 
 Work to fix or track:
   FIX    Fix new defects before merge; keep only tracked, known defects afterward.
+
   TODO   Specific, nonblocking follow-up; remove when done.
+         Use TODO for work that remains planned but doesn’t make the current code invalid
+
   HACK   Explain the workaround and when to remove it; remove when replaced.
   WARN   Serious hazard; keep only while the hazard exists.
   PERF   Meet requirements first; track optional improvements until done.
